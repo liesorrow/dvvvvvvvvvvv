@@ -1,0 +1,150 @@
+body{background: url('/image/zorane_nebo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+header
+{
+    background-color: rgba(102, 51, 117, 0.918);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    padding: 5px;
+    line-height: 10px;
+    z-index: 2;
+}
+header h1
+{
+    font-size: 250%;
+    opacity: 0.7;
+}
+header a
+{
+    font-size: 140%;
+    margin-right: 10px;
+    text-decoration: none;
+    color:rgb(228, 121, 21);
+}
+footer
+{
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+form
+{
+    text-decoration: none;
+    width: 200px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login_form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+form input
+{
+    margin-bottom: 10px;
+    font-size:medium;
+    border-radius: 5px;
+}
+article
+{
+    height: 145px;
+    width: 650px;
+    margin-top: 100px;
+    margin-bottom: -90px;
+    margin-left: 25%;
+    padding: 5px;
+    border-radius: 15px 5px 15px 5px;
+    background-color: rgba(61, 107, 151, 0.829);
+    position: relative;
+    display: table;
+}
+
+#comments_article
+{
+    height: 145px;
+    width: 650px;
+    margin-top: 100px;
+    margin-bottom: -90px;
+    margin-left: 25%;
+    padding: 5px;
+    border-radius: 15px 5px 15px 5px;
+    background-color: rgba(196, 145, 36, 0.829);
+    position: relative;
+    display: table;
+}
+
+#title_comments
+{
+    margin-top: 100px;
+    margin-bottom: -90px;
+    margin-left: 45%;
+}
+
+article div 
+{
+    display: flex;
+    justify-content: space-between;
+}
+  
+article span 
+{
+    font-size: 14px;
+    color: rgb(170, 190, 39)
+}
+  
+article h1 
+{
+    text-align: center; 
+    margin: -2px
+}
+  
+article p 
+{
+    font-size: 18px;
+}
+article a
+{
+    text-decoration: none;
+    color: inherit;
+}
+#add_comment
+{
+    position: absolute;
+    bottom: 5px;
+    right: 5px; 
+}
+.Time
+{
+    position: absolute;
+    bottom: 5px;
+}
+.Author
+{
+    position: absolute;
+    right: 5px;
+}
+#edit
+{
+    position: absolute;
+    bottom: 5px;
+    right: 5px; 
+}
+#delete
+{
+    position: absolute;
+    bottom: 5px;
+    right: 90px; 
+}

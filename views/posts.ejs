@@ -1,0 +1,33 @@
+<%- include('./partials/header.ejs') %>   <%- include('./partials/nav.ejs') %> 
+    <%if(posts){%>
+    <%posts.forEach(function(post) {%>
+    <article>
+        <div>
+            <span class="Time"><%= post.createdAt.toLocaleString()%></span>
+            <span class="Author"><%= post.postAuthor%></span>
+        </div>
+        <h1><a href="/post/<%= post._id%>"><%= post.postTitle%></a></h1>
+        <p id="content">
+            <%= post.postContent.substring(0,260)%>
+            <%if(post.postContent.length > 260){%>
+            ... "Текст обрізаний"
+            <%}%>
+        </p>
+        <a id="edit" href="/editPosts/<%= post._id%>">Редагувати</a>
+        <a id="delete" href="" data-id="<%= post._id %>">Видалити</a>
+    </article>
+    <% })%>
+    <%}%>
+    <script>
+        document.addEventListener("click", (e) => {
+          const id = e.target?.dataset?.id || null;
+          if (id) {
+            fetch(`/posts/${id}`, {
+              method: "DELETE",
+            }).then(() => {
+              window.location.reload();
+            });
+          }
+        });
+      </script>
+<%- include('./partials/footer.ejs') %>    

@@ -1,0 +1,15 @@
+<%- include('./partials/header.ejs') %>   <%- include('./partials/nav.ejs') %> 
+    <div class="login_form">
+        <form method="post" action="/editPosts/<%=post._id%>?_method=PUT" >
+          
+          <input value="<%=postAuthor%>" type="text" id="post_author" name="postAuthor" placeholder="автор" required>
+        
+          <input value="<%=postTitle%>" type="text" id="post_title" name="postTitle" placeholder="заголовок" required>
+
+          <textarea id="post_content" name="postContent" rows="5" required><%=postContent%></textarea>
+        
+          <button type="submit">Опублікувати</button>
+        </form>
+    </div>
+   
+<%- include('./partials/footer.ejs') %>   
